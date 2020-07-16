@@ -15,5 +15,5 @@ interface WordDao {
     @Delete
     suspend fun delete(word: Word)
     @Query("SELECT * FROM WORD ORDER BY ID DESC")
-    fun getAllWords() : List<Word>
+    suspend fun getAllWords() : List<Word>
 }
